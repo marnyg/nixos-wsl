@@ -144,7 +144,7 @@
       },
       "locked": {
         "lastModified": 1673798407,
-        "narHash": "sha256-JrOZHBes41IqrcyAiGRymqFQgmXNJyNyq5SJgYMwUoU=",
+        "narHash": "sha256-JuThn2h/OviLaNvU12jo/qyvzLDFXXuUc13YBvi+0tU=",
         "type": "git",
         "url": "file:///home/nixos/git/nixos"
       },

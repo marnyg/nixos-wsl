@@ -19,13 +19,6 @@
 
   };
 
-  #enable system module
-  #modules.syncthing.enable = true;
-  #modules.firefox.enable = true;
-  #modules.zsh.enable = true;
-  #modules.dunst.enable = true;
-  #modules.tailscale-autoconnect.enable =true;
-
   # Enable nix flakes
   nix.package = pkgs.nixFlakes;
   nix.extraOptions = ''

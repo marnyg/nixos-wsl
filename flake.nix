@@ -13,8 +13,8 @@
 
   outputs = { self, nixpkgs, nixos-wsl, my-nixos, home-manager }: {
     nixosConfigurations = import ./nixosSystems.nix { inherit nixpkgs my-nixos home-manager nixos-wsl; };
-    devShells = import ./flakeFuntions/shell.nix { inherit nixpkgs; };
-    checks = import ./flakeFunctions/checks.nix { inherit nixpkgs; };
+    devShells = import ./flakeUtils/shell.nix { inherit nixpkgs; };
+    checks = import ./flakeUtils/checks.nix { inherit nixpkgs; };
     formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
   };
 }
