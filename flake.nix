@@ -9,11 +9,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    my-nvim.url = "git+file:///home/nixos/git/nvim-conf";
   };
 
-  outputs = { self, nixpkgs, nixos-wsl, my-nixos, home-manager, my-nvim }: {
-    nixosConfigurations = import ./nixosSystems.nix { inherit nixpkgs my-nixos home-manager nixos-wsl my-nvim; };
+  outputs = { self, nixpkgs, nixos-wsl, my-nixos, home-manager }: {
+    nixosConfigurations = import ./nixosSystems.nix { inherit nixpkgs my-nixos home-manager nixos-wsl; };
     devShells = import ./flakeUtils/shell.nix { inherit nixpkgs; };
     checks = import ./flakeUtils/checks.nix { inherit nixpkgs; };
     formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;

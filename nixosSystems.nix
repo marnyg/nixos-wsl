@@ -1,4 +1,4 @@
-{ nixpkgs, nixos-wsl, my-nixos, home-manager, my-nvim }:
+{ nixpkgs, nixos-wsl, my-nixos, home-manager }:
 {
   mysystem = nixpkgs.lib.nixosSystem
     {
@@ -10,12 +10,8 @@
       };
       modules = [
         ./configuration.nix
-        {
-          modules.myNvim.enable=true;
-        }
-        my-nvim.nixosModule2."x86_64-linux"
         my-nixos.nixosModules
-        home-manager.nixosModules.home-manager  
+        home-manager.nixosModules.home-manager
         ./homemanagerConfig.nix
       ];
     };

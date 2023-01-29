@@ -1,4 +1,4 @@
-{ home-manager, my-nixos, ... }:
+{ home-manager, my-nixos, pkgs, ... }:
 {
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
@@ -6,11 +6,12 @@
   home-manager.users.nixos.imports = [
     my-nixos.homeManagerModules
     {
-        #      #modules.syncthing.enable = true;
-        #      modules.firefox.enable = true;
-              modules.zsh.enable = true;
-        #      #dunst.enable = true;
-        #      #tailscale-autoconnect.enable =true;
+      #      #modules.syncthing.enable = true;
+      #      modules.firefox.enable = true;
+      modules.zsh.enable = true;
+      modules.zellij.enable = true;
+       #dunst.enable = true;
+      #      #tailscale-autoconnect.enable =true;
     }
     {
       programs.home-manager.enable = true;
